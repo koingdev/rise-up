@@ -7,21 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1537C5A2B13084E5400D8F51 /* Pods_rise_up.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76377F30A5909020FF7F9C54 /* Pods_rise_up.framework */; };
 		A218CB511FD52203009AE81E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A218CB501FD52203009AE81E /* AppDelegate.swift */; };
-		A218CB531FD52203009AE81E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A218CB521FD52203009AE81E /* ViewController.swift */; };
+		A218CB531FD52203009AE81E /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A218CB521FD52203009AE81E /* HomeVC.swift */; };
 		A218CB561FD52203009AE81E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A218CB541FD52203009AE81E /* Main.storyboard */; };
 		A218CB581FD52203009AE81E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A218CB571FD52203009AE81E /* Assets.xcassets */; };
 		A218CB5B1FD52203009AE81E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A218CB591FD52203009AE81E /* LaunchScreen.storyboard */; };
+		A218CB661FD5224A009AE81E /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A218CB651FD5224A009AE81E /* SWRevealViewController.m */; };
+		A218CB681FD528BE009AE81E /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A218CB671FD528BE009AE81E /* MenuVC.swift */; };
+		A218CB6A1FD52B5F009AE81E /* ScreenOneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A218CB691FD52B5F009AE81E /* ScreenOneVC.swift */; };
+		A2EE5F821FD67E8E00B6476B /* RiseUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EE5F811FD67E8E00B6476B /* RiseUp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D835AA8DB52401CE264D26D /* Pods-rise-up.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rise-up.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rise-up/Pods-rise-up.debug.xcconfig"; sourceTree = "<group>"; };
+		76377F30A5909020FF7F9C54 /* Pods_rise_up.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rise_up.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A218CB4D1FD52203009AE81E /* rise-up.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rise-up.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A218CB501FD52203009AE81E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A218CB521FD52203009AE81E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A218CB521FD52203009AE81E /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		A218CB551FD52203009AE81E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A218CB571FD52203009AE81E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A218CB5A1FD52203009AE81E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A218CB5C1FD52203009AE81E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A218CB631FD5224A009AE81E /* rise-up-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "rise-up-Bridging-Header.h"; sourceTree = "<group>"; };
+		A218CB641FD5224A009AE81E /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		A218CB651FD5224A009AE81E /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		A218CB671FD528BE009AE81E /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
+		A218CB691FD52B5F009AE81E /* ScreenOneVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenOneVC.swift; sourceTree = "<group>"; };
+		A2EE5F811FD67E8E00B6476B /* RiseUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiseUp.swift; sourceTree = "<group>"; };
+		F56F7DCCCC8B6D3B3C7ADA30 /* Pods-rise-up.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rise-up.release.xcconfig"; path = "Pods/Target Support Files/Pods-rise-up/Pods-rise-up.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1537C5A2B13084E5400D8F51 /* Pods_rise_up.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +55,8 @@
 			children = (
 				A218CB4F1FD52203009AE81E /* rise-up */,
 				A218CB4E1FD52203009AE81E /* Products */,
+				FF3639660FA2B773E0FAA760 /* Pods */,
+				B5F39F080B3EBCC5B47F2DED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +71,69 @@
 		A218CB4F1FD52203009AE81E /* rise-up */ = {
 			isa = PBXGroup;
 			children = (
+				A218CB6D1FD53BAD009AE81E /* Model */,
+				A218CB6C1FD53BA6009AE81E /* View */,
+				A218CB6B1FD53B9E009AE81E /* Controller */,
+				A218CB621FD52216009AE81E /* Supporting Files */,
 				A218CB501FD52203009AE81E /* AppDelegate.swift */,
-				A218CB521FD52203009AE81E /* ViewController.swift */,
 				A218CB541FD52203009AE81E /* Main.storyboard */,
 				A218CB571FD52203009AE81E /* Assets.xcassets */,
 				A218CB591FD52203009AE81E /* LaunchScreen.storyboard */,
 				A218CB5C1FD52203009AE81E /* Info.plist */,
 			);
 			path = "rise-up";
+			sourceTree = "<group>";
+		};
+		A218CB621FD52216009AE81E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A218CB641FD5224A009AE81E /* SWRevealViewController.h */,
+				A218CB651FD5224A009AE81E /* SWRevealViewController.m */,
+				A218CB631FD5224A009AE81E /* rise-up-Bridging-Header.h */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A218CB6B1FD53B9E009AE81E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A218CB671FD528BE009AE81E /* MenuVC.swift */,
+				A218CB521FD52203009AE81E /* HomeVC.swift */,
+				A218CB691FD52B5F009AE81E /* ScreenOneVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		A218CB6C1FD53BA6009AE81E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A218CB6D1FD53BAD009AE81E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A2EE5F811FD67E8E00B6476B /* RiseUp.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B5F39F080B3EBCC5B47F2DED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				76377F30A5909020FF7F9C54 /* Pods_rise_up.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FF3639660FA2B773E0FAA760 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5D835AA8DB52401CE264D26D /* Pods-rise-up.debug.xcconfig */,
+				F56F7DCCCC8B6D3B3C7ADA30 /* Pods-rise-up.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +143,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A218CB5F1FD52203009AE81E /* Build configuration list for PBXNativeTarget "rise-up" */;
 			buildPhases = (
+				2017EE623FF02313A57C7EEB /* [CP] Check Pods Manifest.lock */,
 				A218CB491FD52203009AE81E /* Sources */,
 				A218CB4A1FD52203009AE81E /* Frameworks */,
 				A218CB4B1FD52203009AE81E /* Resources */,
+				1E8D117417814B97410F6B65 /* [CP] Embed Pods Frameworks */,
+				5482F42517622E8977F86DC5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -97,6 +172,7 @@
 					A218CB4C1FD52203009AE81E = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = MM23294F8G;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -132,13 +208,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1E8D117417814B97410F6B65 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-rise-up/Pods-rise-up-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2017EE623FF02313A57C7EEB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5482F42517622E8977F86DC5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-rise-up/Pods-rise-up-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A218CB491FD52203009AE81E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A218CB531FD52203009AE81E /* ViewController.swift in Sources */,
+				A218CB531FD52203009AE81E /* HomeVC.swift in Sources */,
+				A2EE5F821FD67E8E00B6476B /* RiseUp.swift in Sources */,
+				A218CB681FD528BE009AE81E /* MenuVC.swift in Sources */,
+				A218CB6A1FD52B5F009AE81E /* ScreenOneVC.swift in Sources */,
 				A218CB511FD52203009AE81E /* AppDelegate.swift in Sources */,
+				A218CB661FD5224A009AE81E /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,26 +389,33 @@
 		};
 		A218CB601FD52203009AE81E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D835AA8DB52401CE264D26D /* Pods-rise-up.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = MM23294F8G;
 				INFOPLIST_FILE = "rise-up/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "koingdev.rise-up";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "rise-up/rise-up-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		A218CB611FD52203009AE81E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F56F7DCCCC8B6D3B3C7ADA30 /* Pods-rise-up.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = MM23294F8G;
 				INFOPLIST_FILE = "rise-up/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "koingdev.rise-up";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "rise-up/rise-up-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -304,6 +439,7 @@
 				A218CB611FD52203009AE81E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,6 @@
+framework module Pods_rise_up {
+  umbrella header "Pods-rise-up-umbrella.h"
+
+  export *
+  module * { export * }
+}
