@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1537C5A2B13084E5400D8F51 /* Pods_rise_up.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76377F30A5909020FF7F9C54 /* Pods_rise_up.framework */; };
+		A21574231FD70078008D5227 /* RiseUpUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21574221FD70078008D5227 /* RiseUpUtils.swift */; };
 		A218CB511FD52203009AE81E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A218CB501FD52203009AE81E /* AppDelegate.swift */; };
 		A218CB531FD52203009AE81E /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A218CB521FD52203009AE81E /* HomeVC.swift */; };
 		A218CB561FD52203009AE81E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A218CB541FD52203009AE81E /* Main.storyboard */; };
@@ -16,12 +17,14 @@
 		A218CB661FD5224A009AE81E /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A218CB651FD5224A009AE81E /* SWRevealViewController.m */; };
 		A218CB681FD528BE009AE81E /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A218CB671FD528BE009AE81E /* MenuVC.swift */; };
 		A218CB6A1FD52B5F009AE81E /* ScreenOneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A218CB691FD52B5F009AE81E /* ScreenOneVC.swift */; };
+		A2778D531FD6F0A100DFE7FE /* RiseUpCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2778D521FD6F0A100DFE7FE /* RiseUpCell.swift */; };
 		A2EE5F821FD67E8E00B6476B /* RiseUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EE5F811FD67E8E00B6476B /* RiseUp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5D835AA8DB52401CE264D26D /* Pods-rise-up.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rise-up.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rise-up/Pods-rise-up.debug.xcconfig"; sourceTree = "<group>"; };
 		76377F30A5909020FF7F9C54 /* Pods_rise_up.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rise_up.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A21574221FD70078008D5227 /* RiseUpUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiseUpUtils.swift; sourceTree = "<group>"; };
 		A218CB4D1FD52203009AE81E /* rise-up.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rise-up.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A218CB501FD52203009AE81E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A218CB521FD52203009AE81E /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -34,6 +37,7 @@
 		A218CB651FD5224A009AE81E /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		A218CB671FD528BE009AE81E /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 		A218CB691FD52B5F009AE81E /* ScreenOneVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenOneVC.swift; sourceTree = "<group>"; };
+		A2778D521FD6F0A100DFE7FE /* RiseUpCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiseUpCell.swift; sourceTree = "<group>"; };
 		A2EE5F811FD67E8E00B6476B /* RiseUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiseUp.swift; sourceTree = "<group>"; };
 		F56F7DCCCC8B6D3B3C7ADA30 /* Pods-rise-up.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rise-up.release.xcconfig"; path = "Pods/Target Support Files/Pods-rise-up/Pods-rise-up.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -50,6 +54,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A21574211FD70049008D5227 /* DataService */ = {
+			isa = PBXGroup;
+			children = (
+				A21574221FD70078008D5227 /* RiseUpUtils.swift */,
+			);
+			name = DataService;
+			sourceTree = "<group>";
+		};
 		A218CB441FD52203009AE81E = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +83,7 @@
 		A218CB4F1FD52203009AE81E /* rise-up */ = {
 			isa = PBXGroup;
 			children = (
+				A21574211FD70049008D5227 /* DataService */,
 				A218CB6D1FD53BAD009AE81E /* Model */,
 				A218CB6C1FD53BA6009AE81E /* View */,
 				A218CB6B1FD53B9E009AE81E /* Controller */,
@@ -107,6 +120,7 @@
 		A218CB6C1FD53BA6009AE81E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A2778D521FD6F0A100DFE7FE /* RiseUpCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -267,6 +281,8 @@
 				A218CB6A1FD52B5F009AE81E /* ScreenOneVC.swift in Sources */,
 				A218CB511FD52203009AE81E /* AppDelegate.swift in Sources */,
 				A218CB661FD5224A009AE81E /* SWRevealViewController.m in Sources */,
+				A2778D531FD6F0A100DFE7FE /* RiseUpCell.swift in Sources */,
+				A21574231FD70078008D5227 /* RiseUpUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

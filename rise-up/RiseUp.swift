@@ -9,26 +9,18 @@
 import Foundation
 
 class RiseUp {
-    private(set) public var title = ""
-    private(set) public var url = ""
-    private(set) public var image = ""
-    private(set) public var author = ""
-    private(set) public var date = ""
+    private(set) public var title: String?
+    private(set) public var url: String?
+    private(set) public var image: String?
+    private(set) public var author: String?
+    private(set) public var date: String?
     
-    init(title: String, url: String, image: String, author: String, date: String) {
+    public init(title: String, url: String, image: String, author: String, date: String) {
         self.title = title
         self.url = url
         self.image = image
         self.author = author
         self.date = date
-    }
-    
-    public func printData(){
-        print(self.title)
-        print(self.url)
-        print(self.image)
-        print(self.author)
-        print(self.date)
     }
     
 }

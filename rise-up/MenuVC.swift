@@ -9,6 +9,8 @@
 import UIKit
 
 class MenuVC: UIViewController {
+    
+    var menu = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,19 +18,20 @@ class MenuVC: UIViewController {
     }
 
     @IBAction func navigateToOne(_ sender: Any) {
-        performSegue(withIdentifier: "screen-one", sender: nil)
+        menu = "iOS"
+        performSegue(withIdentifier: "riseup", sender: nil)
     }
     @IBAction func navigateToHome(_ sender: Any) {
-        performSegue(withIdentifier: "screen-home", sender: nil)
+        menu = "Android"
+        performSegue(withIdentifier: "riseup", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //passing data from MenuVC to ScreenOneVC
-        if segue.identifier == "screen-one" {
-            let data = "Title from MenuVC"
+        if segue.identifier == "riseup" {
             let view = segue.destination as! UINavigationController
-            let rootView = view.topViewController as! ScreenOneVC
-            rootView.myTitle = data
+            let rootView = view.topViewController as! HomeVC
+            rootView.screenTitle = menu
         }
     }
 }
