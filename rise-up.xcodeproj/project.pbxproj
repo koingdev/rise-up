@@ -17,6 +17,7 @@
 		A218CB661FD5224A009AE81E /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A218CB651FD5224A009AE81E /* SWRevealViewController.m */; };
 		A218CB681FD528BE009AE81E /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A218CB671FD528BE009AE81E /* MenuVC.swift */; };
 		A2778D531FD6F0A100DFE7FE /* RiseUpCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2778D521FD6F0A100DFE7FE /* RiseUpCell.swift */; };
+		A2EAD1B91FD79B8900459663 /* ContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EAD1B81FD79B8900459663 /* ContentVC.swift */; };
 		A2EE5F821FD67E8E00B6476B /* RiseUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EE5F811FD67E8E00B6476B /* RiseUp.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		A218CB651FD5224A009AE81E /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		A218CB671FD528BE009AE81E /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 		A2778D521FD6F0A100DFE7FE /* RiseUpCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiseUpCell.swift; sourceTree = "<group>"; };
+		A2EAD1B81FD79B8900459663 /* ContentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentVC.swift; sourceTree = "<group>"; };
 		A2EE5F811FD67E8E00B6476B /* RiseUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiseUp.swift; sourceTree = "<group>"; };
 		F56F7DCCCC8B6D3B3C7ADA30 /* Pods-rise-up.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rise-up.release.xcconfig"; path = "Pods/Target Support Files/Pods-rise-up/Pods-rise-up.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,6 +112,7 @@
 			children = (
 				A218CB671FD528BE009AE81E /* MenuVC.swift */,
 				A218CB521FD52203009AE81E /* HomeVC.swift */,
+				A2EAD1B81FD79B8900459663 /* ContentVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				A218CB511FD52203009AE81E /* AppDelegate.swift in Sources */,
 				A218CB661FD5224A009AE81E /* SWRevealViewController.m in Sources */,
 				A2778D531FD6F0A100DFE7FE /* RiseUpCell.swift in Sources */,
+				A2EAD1B91FD79B8900459663 /* ContentVC.swift in Sources */,
 				A21574231FD70078008D5227 /* RiseUpUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

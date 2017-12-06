@@ -169,6 +169,7 @@
                                             <outlet property="imgImage" destination="639-5z-zhO" id="pHw-lq-i7q"/>
                                             <outlet property="lblDate" destination="chw-wf-hu8" id="dma-So-J1M"/>
                                             <outlet property="lblTitle" destination="1qD-dz-P6D" id="8s5-Xa-rSz"/>
+                                            <segue destination="aEx-17-gs4" kind="show" identifier="content" id="UcG-B7-gNQ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -192,7 +193,40 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tth-Ff-Yrp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="269.60000000000002" y="330.58470764617692"/>
+            <point key="canvasLocation" x="194" y="331"/>
+        </scene>
+        <!--ContentVC-->
+        <scene sceneID="PY6-ov-BVb">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="aEx-17-gs4" customClass="ContentVC" customModule="rise_up" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3sm-dh-bqT"/>
+                        <viewControllerLayoutGuide type="bottom" id="SqU-wC-mPW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Hja-Nj-4Ab">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pdx-KE-oi9">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SqU-wC-mPW" firstAttribute="top" secondItem="Pdx-KE-oi9" secondAttribute="bottom" id="9LM-Ff-FqW"/>
+                            <constraint firstAttribute="trailing" secondItem="Pdx-KE-oi9" secondAttribute="trailing" id="FF9-DH-tvE"/>
+                            <constraint firstItem="Pdx-KE-oi9" firstAttribute="leading" secondItem="Hja-Nj-4Ab" secondAttribute="leading" id="H0M-PZ-W4t"/>
+                            <constraint firstItem="Pdx-KE-oi9" firstAttribute="top" secondItem="3sm-dh-bqT" secondAttribute="bottom" id="tfo-Sl-qCS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="Pdx-KE-oi9" id="PRq-DC-EaF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jM2-5o-3ct" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="917.60000000000002" y="330.58470764617692"/>
         </scene>
     </scenes>
     <resources>

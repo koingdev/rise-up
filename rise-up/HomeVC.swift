@@ -97,6 +97,18 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    //when user click on each row, send the content url to ContentVC to open in WebView
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "content" {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let currentRowIndex = indexPath.row
+                let currentUrl = self.riseUpArr[currentRowIndex].url
+                let contentView = segue.destination as! ContentVC
+                contentView.url = currentUrl!
+            }
+        }
+    }
+    
     //number of row
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return riseUpArr.count
