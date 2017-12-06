@@ -8,7 +8,7 @@
 
 import Foundation
 
-class RiseUp {
+struct RiseUp {
     private(set) public var title: String?
     private(set) public var url: String?
     private(set) public var image: String?

@@ -11,10 +11,9 @@ import AlamofireImage
 
 class RiseUpCell: UITableViewCell {
     
+    @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var imgImage: UIImageView!
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblDate: UILabel!
-    
-    
-    
+
 }

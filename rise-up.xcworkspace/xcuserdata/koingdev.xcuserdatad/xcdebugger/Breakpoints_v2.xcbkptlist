@@ -6,7 +6,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "rise-up/RiseUp.swift"
@@ -16,37 +16,37 @@
             startingLineNumber = "11"
             endingLineNumber = "11"
             landmarkName = "RiseUp"
-            landmarkType = "3">
+            landmarkType = "14">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "rise_up.RiseUp.__deallocating_deinit"
+                  symbolName = "rise_up.RiseUp.title.getter : Swift.Optional&lt;Swift.String&gt;"
                   moduleName = "rise-up"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Volumes/DATA/xcodeWorkspace/rise-up/rise-up/RiseUp.swift"
-                  timestampString = "534188451.910942"
+                  timestampString = "534221278.23811"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "4">
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "403">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "rise_up.RiseUp.deinit"
+                  symbolName = "rise_up.RiseUp.init (title : Swift.String, url : Swift.String, image : Swift.String, author : Swift.String, date : Swift.String) -&gt; rise_up.RiseUp"
                   moduleName = "rise-up"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Volumes/DATA/xcodeWorkspace/rise-up/rise-up/RiseUp.swift"
-                  timestampString = "534188451.914512"
+                  timestampString = "534221278.241305"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "4">
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "298">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "rise-up/HomeVC.swift"
-            timestampString = "534188356.179716"
+            timestampString = "534219463.121606"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "15"
@@ -97,6 +97,86 @@
             endingLineNumber = "16"
             landmarkName = "RiseUpUtils"
             landmarkType = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "rise-up/HomeVC.swift"
+            timestampString = "534222243.49476"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "loadData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "rise-up/HomeVC.swift"
+            timestampString = "534222243.49476"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "loadData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "rise_up.HomeVC.loadData (urlParam : Swift.String) -&gt; ()"
+                  moduleName = "rise-up"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/DATA/xcodeWorkspace/rise-up/rise-up/HomeVC.swift"
+                  timestampString = "534220834.881864"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "1118">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "rise_up.HomeVC.(loadData (urlParam : Swift.String) -&gt; ()).(closure #1)"
+                  moduleName = "rise-up"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/DATA/xcodeWorkspace/rise-up/rise-up/HomeVC.swift"
+                  timestampString = "534220834.885197"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "34">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "rise-up/HomeVC.swift"
+            timestampString = "534222243.49476"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "loadData()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

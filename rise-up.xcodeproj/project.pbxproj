@@ -16,7 +16,6 @@
 		A218CB5B1FD52203009AE81E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A218CB591FD52203009AE81E /* LaunchScreen.storyboard */; };
 		A218CB661FD5224A009AE81E /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A218CB651FD5224A009AE81E /* SWRevealViewController.m */; };
 		A218CB681FD528BE009AE81E /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A218CB671FD528BE009AE81E /* MenuVC.swift */; };
-		A218CB6A1FD52B5F009AE81E /* ScreenOneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A218CB691FD52B5F009AE81E /* ScreenOneVC.swift */; };
 		A2778D531FD6F0A100DFE7FE /* RiseUpCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2778D521FD6F0A100DFE7FE /* RiseUpCell.swift */; };
 		A2EE5F821FD67E8E00B6476B /* RiseUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EE5F811FD67E8E00B6476B /* RiseUp.swift */; };
 /* End PBXBuildFile section */
@@ -36,7 +35,6 @@
 		A218CB641FD5224A009AE81E /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		A218CB651FD5224A009AE81E /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		A218CB671FD528BE009AE81E /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
-		A218CB691FD52B5F009AE81E /* ScreenOneVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenOneVC.swift; sourceTree = "<group>"; };
 		A2778D521FD6F0A100DFE7FE /* RiseUpCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiseUpCell.swift; sourceTree = "<group>"; };
 		A2EE5F811FD67E8E00B6476B /* RiseUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiseUp.swift; sourceTree = "<group>"; };
 		F56F7DCCCC8B6D3B3C7ADA30 /* Pods-rise-up.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rise-up.release.xcconfig"; path = "Pods/Target Support Files/Pods-rise-up/Pods-rise-up.release.xcconfig"; sourceTree = "<group>"; };
@@ -112,7 +110,6 @@
 			children = (
 				A218CB671FD528BE009AE81E /* MenuVC.swift */,
 				A218CB521FD52203009AE81E /* HomeVC.swift */,
-				A218CB691FD52B5F009AE81E /* ScreenOneVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -278,7 +275,6 @@
 				A218CB531FD52203009AE81E /* HomeVC.swift in Sources */,
 				A2EE5F821FD67E8E00B6476B /* RiseUp.swift in Sources */,
 				A218CB681FD528BE009AE81E /* MenuVC.swift in Sources */,
-				A218CB6A1FD52B5F009AE81E /* ScreenOneVC.swift in Sources */,
 				A218CB511FD52203009AE81E /* AppDelegate.swift in Sources */,
 				A218CB661FD5224A009AE81E /* SWRevealViewController.m in Sources */,
 				A2778D531FD6F0A100DFE7FE /* RiseUpCell.swift in Sources */,

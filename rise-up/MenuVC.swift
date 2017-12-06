@@ -18,11 +18,11 @@ class MenuVC: UIViewController {
     }
 
     @IBAction func navigateToOne(_ sender: Any) {
-        menu = "iOS"
+        self.menu = "iOS"
         performSegue(withIdentifier: "riseup", sender: nil)
     }
     @IBAction func navigateToHome(_ sender: Any) {
-        menu = "Android"
+        self.menu = "Android"
         performSegue(withIdentifier: "riseup", sender: nil)
     }
     
@@ -31,7 +31,7 @@ class MenuVC: UIViewController {
         if segue.identifier == "riseup" {
             let view = segue.destination as! UINavigationController
             let rootView = view.topViewController as! HomeVC
-            rootView.screenTitle = menu
+            rootView.screenTitle = self.menu
         }
     }
 }
