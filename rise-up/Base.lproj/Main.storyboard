@@ -165,6 +165,27 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eK6-g3-PVg">
+                                <rect key="frame" x="16" y="605" width="237" height="42"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developer: Saingkoing SEA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7NN-ZO-fDb">
+                                        <rect key="frame" x="0.0" y="0.0" width="237" height="21"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
+                                        <color key="textColor" red="0.78880766329999996" green="1" blue="0.88512775430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="highlightedColor" red="0.2468794882" green="0.66680502890000004" blue="0.85902029280000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <size key="shadowOffset" width="2" height="2"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email: saingkoing.sea@r-up.jp" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ho1-LZ-Aiy">
+                                        <rect key="frame" x="0.0" y="21" width="237" height="21"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
+                                        <color key="textColor" red="0.78880766329999996" green="1" blue="0.88512775430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="highlightedColor" red="0.2468794882" green="0.66680502890000004" blue="0.85902029280000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <size key="shadowOffset" width="2" height="2"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.86274509799999999" green="0.85882352939999995" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.93424809639999995" green="0.2228447147" blue="0.13143938620000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -172,9 +193,11 @@
                             <constraint firstItem="bMk-1A-mYF" firstAttribute="leading" secondItem="vXw-hA-RV9" secondAttribute="leadingMargin" id="5qh-zj-vK0"/>
                             <constraint firstItem="Ijb-46-cfu" firstAttribute="leading" secondItem="vXw-hA-RV9" secondAttribute="leadingMargin" id="IY4-1O-vVM"/>
                             <constraint firstItem="Tah-jA-DAq" firstAttribute="leading" secondItem="vXw-hA-RV9" secondAttribute="leadingMargin" id="fNW-Zr-zmn"/>
+                            <constraint firstItem="15l-9L-N7H" firstAttribute="top" secondItem="eK6-g3-PVg" secondAttribute="bottom" constant="20" id="kr5-4R-Og1"/>
                             <constraint firstItem="Tah-jA-DAq" firstAttribute="top" secondItem="wDJ-8r-hRh" secondAttribute="bottom" constant="25" id="oVI-WZ-x3s"/>
                             <constraint firstItem="Ijb-46-cfu" firstAttribute="top" secondItem="Tah-jA-DAq" secondAttribute="bottom" constant="40" id="pgQ-gk-olN"/>
                             <constraint firstItem="bMk-1A-mYF" firstAttribute="top" secondItem="Ijb-46-cfu" secondAttribute="bottom" constant="12" id="r6w-DW-dua"/>
+                            <constraint firstItem="eK6-g3-PVg" firstAttribute="leading" secondItem="vXw-hA-RV9" secondAttribute="leadingMargin" id="ySt-Yk-731"/>
                         </constraints>
                     </view>
                     <connections>
@@ -308,7 +331,7 @@
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7N-ne-uLi">
                                 <rect key="frame" x="187.5" y="301.5" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
                                 <color key="textColor" red="0.93424809639999995" green="0.2228447147" blue="0.13143938620000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -352,11 +375,11 @@
                         <subviews>
                             <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pdx-KE-oi9">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g3I-c5-ehA">
                                 <rect key="frame" x="187.5" y="301.5" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
                                 <color key="textColor" red="0.93424809639999995" green="0.2228447147" blue="0.13143938620000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>

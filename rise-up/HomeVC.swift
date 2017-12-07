@@ -8,7 +8,6 @@
 
 import UIKit
 import Alamofire
-import AlamofireImage
 import SwiftSoup
 
 class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -39,16 +38,16 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.tableView.backgroundView = nil
         self.tableView.backgroundColor = self.bgColor
         
-        //add footerCell to tableFooterView
-        //if scrolling to bottom event not hapen, footerCell is hidden
-        //And when the event happens, footerCell is shown, but if data on next page not exist it will hide
+        //add footerCell to tableFooterView and hide it by default
+        //And when user scroll to bottom, footerCell shows, but if data on next page not exist
+        //it will hide
         footerCell = tableView.dequeueReusableCell(withIdentifier: "loading_next")
         self.tableView.tableFooterView = footerCell
         self.tableView.tableFooterView?.isHidden = true
         
         //to make side bar menu works
         if self.revealViewController() != nil {
-            self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 120
+            self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 100
             btnMenu.target = self.revealViewController()
             btnMenu.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
@@ -163,14 +162,9 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         //get a resusable cell and case it to CategoryCell, then pass to cell variable
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! RiseUpCell
         let riseUp = self.riseUpArr[indexPath.row]
-        //render the cell data
-        cell.lblTitle.text = riseUp.title!
-        cell.lblDate.text = riseUp.date!
-        Alamofire.request(riseUp.image!).responseImage { response in
-            if let image = response.result.value {
-                cell.imgImage.image = image
-            }
-        }
+        //update the cell data
+        cell.updateCell(content: riseUp)
+        
         //styling the row layout
         cell.cardView.layer.masksToBounds = true
         cell.cardView.layer.cornerRadius = 20.0
