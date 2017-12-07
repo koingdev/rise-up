@@ -9,12 +9,11 @@
 import UIKit
 
 class MenuVC: UIViewController {
-    
+    //use for passing to HomeVC in order to change the navigation bar title
     var menu = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 
     @IBAction func navigateToOne(_ sender: Any) {

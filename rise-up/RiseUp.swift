@@ -12,14 +12,12 @@ struct RiseUp {
     private(set) public var title: String?
     private(set) public var url: String?
     private(set) public var image: String?
-    private(set) public var author: String?
     private(set) public var date: String?
     
-    public init(title: String, url: String, image: String, author: String, date: String) {
+    public init(title: String = "nil", url: String = "nil", image: String = "nil", date: String = "nil") {
         self.title = title
         self.url = url
         self.image = image
-        self.author = author
         self.date = date
     }
     

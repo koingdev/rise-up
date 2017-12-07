@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		1537C5A2B13084E5400D8F51 /* Pods_rise_up.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76377F30A5909020FF7F9C54 /* Pods_rise_up.framework */; };
-		A21574231FD70078008D5227 /* RiseUpUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21574221FD70078008D5227 /* RiseUpUtils.swift */; };
+		A21574231FD70078008D5227 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21574221FD70078008D5227 /* Constant.swift */; };
 		A218CB511FD52203009AE81E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A218CB501FD52203009AE81E /* AppDelegate.swift */; };
 		A218CB531FD52203009AE81E /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A218CB521FD52203009AE81E /* HomeVC.swift */; };
 		A218CB561FD52203009AE81E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A218CB541FD52203009AE81E /* Main.storyboard */; };
 		A218CB581FD52203009AE81E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A218CB571FD52203009AE81E /* Assets.xcassets */; };
 		A218CB5B1FD52203009AE81E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A218CB591FD52203009AE81E /* LaunchScreen.storyboard */; };
 		A218CB681FD528BE009AE81E /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A218CB671FD528BE009AE81E /* MenuVC.swift */; };
+		A24B3E7B1FD8C9BF007A1993 /* CustomGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24B3E7A1FD8C9BF007A1993 /* CustomGradientView.swift */; };
 		A2778D531FD6F0A100DFE7FE /* RiseUpCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2778D521FD6F0A100DFE7FE /* RiseUpCell.swift */; };
 		A2EAD1B91FD79B8900459663 /* ContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EAD1B81FD79B8900459663 /* ContentVC.swift */; };
 		A2EAD1C81FD7AD8700459663 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2EAD1C71FD7AD8700459663 /* SWRevealViewController.m */; };
@@ -24,7 +25,7 @@
 /* Begin PBXFileReference section */
 		5D835AA8DB52401CE264D26D /* Pods-rise-up.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rise-up.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rise-up/Pods-rise-up.debug.xcconfig"; sourceTree = "<group>"; };
 		76377F30A5909020FF7F9C54 /* Pods_rise_up.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rise_up.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A21574221FD70078008D5227 /* RiseUpUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiseUpUtils.swift; sourceTree = "<group>"; };
+		A21574221FD70078008D5227 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		A218CB4D1FD52203009AE81E /* rise-up.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rise-up.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A218CB501FD52203009AE81E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A218CB521FD52203009AE81E /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -33,6 +34,7 @@
 		A218CB5A1FD52203009AE81E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A218CB5C1FD52203009AE81E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A218CB671FD528BE009AE81E /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
+		A24B3E7A1FD8C9BF007A1993 /* CustomGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomGradientView.swift; sourceTree = "<group>"; };
 		A2778D521FD6F0A100DFE7FE /* RiseUpCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiseUpCell.swift; sourceTree = "<group>"; };
 		A2EAD1B81FD79B8900459663 /* ContentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentVC.swift; sourceTree = "<group>"; };
 		A2EAD1C51FD7AD8600459663 /* rise-up-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "rise-up-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -54,12 +56,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A21574211FD70049008D5227 /* DataService */ = {
+		A21574211FD70049008D5227 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				A21574221FD70078008D5227 /* RiseUpUtils.swift */,
+				A21574221FD70078008D5227 /* Constant.swift */,
 			);
-			name = DataService;
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		A218CB441FD52203009AE81E = {
@@ -83,7 +85,7 @@
 		A218CB4F1FD52203009AE81E /* rise-up */ = {
 			isa = PBXGroup;
 			children = (
-				A21574211FD70049008D5227 /* DataService */,
+				A21574211FD70049008D5227 /* Utils */,
 				A218CB6D1FD53BAD009AE81E /* Model */,
 				A218CB6C1FD53BA6009AE81E /* View */,
 				A218CB6B1FD53B9E009AE81E /* Controller */,
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				A2778D521FD6F0A100DFE7FE /* RiseUpCell.swift */,
+				A24B3E7A1FD8C9BF007A1993 /* CustomGradientView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -280,9 +283,10 @@
 				A218CB681FD528BE009AE81E /* MenuVC.swift in Sources */,
 				A2EAD1C81FD7AD8700459663 /* SWRevealViewController.m in Sources */,
 				A218CB511FD52203009AE81E /* AppDelegate.swift in Sources */,
+				A24B3E7B1FD8C9BF007A1993 /* CustomGradientView.swift in Sources */,
 				A2778D531FD6F0A100DFE7FE /* RiseUpCell.swift in Sources */,
 				A2EAD1B91FD79B8900459663 /* ContentVC.swift in Sources */,
-				A21574231FD70078008D5227 /* RiseUpUtils.swift in Sources */,
+				A21574231FD70078008D5227 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

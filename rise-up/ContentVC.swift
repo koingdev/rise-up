@@ -11,11 +11,13 @@ import Alamofire
 
 class ContentVC: UIViewController {
     
+    //use for storing the url data passed from HomeVC when user click on row
     var url = ""
 
     @IBOutlet weak var webView: UIWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        //load the web view
         self.loadHtml()
     }
     

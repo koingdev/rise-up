@@ -8,6 +8,6 @@ use_frameworks!
 pod 'Alamofire'
 pod 'AlamofireImage'
 pod 'SwiftyJSON'
-#pod 'SwiftSoup', '~>1.3.2'
+pod 'SwiftSoup', '~>1.3.2'
 
 end
