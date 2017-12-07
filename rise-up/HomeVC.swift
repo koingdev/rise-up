@@ -23,7 +23,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     //table view footer contains loading indicator
     var footerCell: UITableViewCell!
     //background color
-    var bgColor = UIColor(red: 215/255.0, green: 243/255.0, blue: 248/255.0, alpha: 0.6)
+    var bgColor = UIColor(red: 228/255.0, green: 228/255.0, blue: 228/255.0, alpha: 1.0)
     
     @IBOutlet weak var btnMenu: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
@@ -174,12 +174,15 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         //styling the row layout
         cell.cardView.layer.masksToBounds = true
         cell.cardView.layer.cornerRadius = 20.0
-        cell.cardView.layer.borderWidth = 1.2
-        cell.cardView.layer.borderColor = UIColor.black.cgColor
+        cell.cardView.layer.borderWidth = 1.3
+        cell.cardView.layer.borderColor = UIColor(red: 99/255.0, green: 221/255.0, blue: 180/255.0, alpha: 1.0).cgColor
 
         return cell
     }
-
+    //reset selected cell color
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
     //scroll to bottom of tabe view, this function invoke
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.row == self.riseUpArr.count - 1 {
