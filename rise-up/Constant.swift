@@ -23,4 +23,6 @@ struct Constant {
     static let UIUX = ""
     static let CMS = ""
     static let DB = ""
+    
+    static let FEEDBACK = "Sorry we cannot connect to the server!!\nPlease check your Internet connection ^^\nand try again.Thanks..."
 }

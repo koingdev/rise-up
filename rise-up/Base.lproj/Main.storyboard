@@ -89,7 +89,7 @@
         <scene sceneID="fH8-qe-FIi">
             <objects>
                 <navigationController id="ZEq-q8-JZv" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="h0v-OI-Wyd">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="h0v-OI-Wyd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.27927508950233459" green="0.58635050058364868" blue="0.86181420087814331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -184,14 +184,39 @@
                                             <segue destination="aEx-17-gs4" kind="show" identifier="content" id="UcG-B7-gNQ"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="loading_next" rowHeight="30" id="aMo-5P-74R">
+                                        <rect key="frame" x="0.0" y="158" width="375" height="30"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aMo-5P-74R" id="TPc-FG-6eR">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="NEU-i3-MuB">
+                                                    <rect key="frame" x="177" y="5" width="20" height="20"/>
+                                                </activityIndicatorView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="NEU-i3-MuB" firstAttribute="centerX" secondItem="TPc-FG-6eR" secondAttribute="centerX" id="BPH-fI-UzB"/>
+                                                <constraint firstItem="NEU-i3-MuB" firstAttribute="centerY" secondItem="TPc-FG-6eR" secondAttribute="centerY" id="skC-Kh-1ft"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7N-ne-uLi">
+                                <rect key="frame" x="187.5" y="302" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                <color key="textColor" red="0.93424809639999995" green="0.2228447147" blue="0.13143938620000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="r7N-ne-uLi" firstAttribute="centerX" secondItem="4aF-Oq-tza" secondAttribute="centerX" id="DS1-Q2-inR"/>
                             <constraint firstItem="p8k-an-G5s" firstAttribute="leading" secondItem="4aF-Oq-tza" secondAttribute="leading" id="I0S-MN-J6y"/>
                             <constraint firstAttribute="trailing" secondItem="p8k-an-G5s" secondAttribute="trailing" id="Qn5-PN-sJR"/>
                             <constraint firstItem="p8k-an-G5s" firstAttribute="top" secondItem="XYL-tB-ndY" secondAttribute="bottom" id="RqV-hY-u3t"/>
+                            <constraint firstItem="r7N-ne-uLi" firstAttribute="centerY" secondItem="4aF-Oq-tza" secondAttribute="centerY" id="hQj-wv-1t7"/>
                             <constraint firstItem="glK-fX-h8o" firstAttribute="top" secondItem="p8k-an-G5s" secondAttribute="bottom" id="wjr-PZ-x7I"/>
                         </constraints>
                     </view>
@@ -200,6 +225,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="btnMenu" destination="p5a-LR-PS1" id="bbh-zz-rwF"/>
+                        <outlet property="lblFeedback" destination="r7N-ne-uLi" id="Yzq-jM-WK4"/>
                         <outlet property="tableView" destination="p8k-an-G5s" id="9hO-Yn-ka9"/>
                     </connections>
                 </viewController>
@@ -223,16 +249,25 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g3I-c5-ehA">
+                                <rect key="frame" x="187.5" y="301.5" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                <color key="textColor" red="0.93424809639999995" green="0.2228447147" blue="0.13143938620000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="SqU-wC-mPW" firstAttribute="top" secondItem="Pdx-KE-oi9" secondAttribute="bottom" id="9LM-Ff-FqW"/>
                             <constraint firstAttribute="trailing" secondItem="Pdx-KE-oi9" secondAttribute="trailing" id="FF9-DH-tvE"/>
                             <constraint firstItem="Pdx-KE-oi9" firstAttribute="leading" secondItem="Hja-Nj-4Ab" secondAttribute="leading" id="H0M-PZ-W4t"/>
+                            <constraint firstItem="g3I-c5-ehA" firstAttribute="centerY" secondItem="Hja-Nj-4Ab" secondAttribute="centerY" id="JvL-hs-fIq"/>
+                            <constraint firstItem="g3I-c5-ehA" firstAttribute="centerX" secondItem="Hja-Nj-4Ab" secondAttribute="centerX" id="dtX-2h-xyU"/>
                             <constraint firstItem="Pdx-KE-oi9" firstAttribute="top" secondItem="3sm-dh-bqT" secondAttribute="bottom" id="tfo-Sl-qCS"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="lblFeedback" destination="g3I-c5-ehA" id="dkP-ee-gPi"/>
                         <outlet property="webView" destination="Pdx-KE-oi9" id="PRq-DC-EaF"/>
                     </connections>
                 </viewController>

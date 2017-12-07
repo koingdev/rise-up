@@ -13,10 +13,26 @@ class ContentVC: UIViewController {
     
     //use for storing the url data passed from HomeVC when user click on row
     var url = ""
+    //indicator when loading web view
+    var activityIndicatorView : UIActivityIndicatorView!
+    var isLoading = true
 
+    @IBOutlet weak var lblFeedback: UILabel!
     @IBOutlet weak var webView: UIWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.lblFeedback.isHidden = true
+        
+        //start loading indicator
+        if isLoading {
+            activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
+            //add it to the middle of web view
+            activityIndicatorView.center = CGPoint(x: webView.frame.size.width / 2, y: webView.frame.size.height / 2)
+            self.webView.addSubview(activityIndicatorView)
+            activityIndicatorView?.startAnimating()
+        }
+        
         //load the web view
         self.loadHtml()
     }
@@ -51,8 +67,12 @@ class ContentVC: UIViewController {
                 self.webView.loadHTMLString(resultContent, baseURL: nil)
                 
             case .failure(let error):
-                print(error)
+                //hide the activityIndicatorView and show feed back
+                self.lblFeedback.isHidden = false
+                self.lblFeedback.text = Constant.FEEDBACK
             }
+            //stop animate the loading indicator
+            self.activityIndicatorView.stopAnimating()
         }
 
     }

@@ -19,19 +19,31 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     //array for storing article data
     var riseUpArr: [RiseUp] = []
     var urlPage = 1
-    //loading indicator
+    //indicator when loading table view
     var activityIndicatorView : UIActivityIndicatorView!
-    var isLoading = true
+    //table view footer contains loading indicator
+    var footerCell: UITableViewCell!
     
     @IBOutlet weak var btnMenu: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var lblFeedback: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.title = screenTitle
+        self.lblFeedback.isHidden = true
         
+        //add footerCell to tableFooterView
+        //if scrolling to bottom event not hapen, footerCell is hidden
+        //And when the event happens, footerCell is shown, but if data on next page not exist, it will hide
+        footerCell = tableView.dequeueReusableCell(withIdentifier: "loading_next")
+        self.tableView.tableFooterView = footerCell
+        self.tableView.tableFooterView?.isHidden = true
+        
+        //to make side bar menu works
         if self.revealViewController() != nil {
             self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 180
             btnMenu.target = self.revealViewController()
@@ -41,11 +53,9 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
         
         //start loading indicator
-        if isLoading {
-            activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
-            self.tableView.backgroundView = activityIndicatorView
-            activityIndicatorView?.startAnimating()
-        }
+        activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
+        self.tableView.backgroundView = activityIndicatorView
+        activityIndicatorView?.startAnimating()
 
         //loading data
         self.loadData(page: urlPage)
@@ -107,16 +117,25 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                     }
                     //reload the table view if data exists
                     self.tableView.reloadData()
-                    self.isLoading = false
                 }catch Exception.Error(let type, let message){
-                    print(message)
+                    self.activityIndicatorView.stopAnimating()
                 }catch{
-                    print("error")
+                    self.activityIndicatorView.stopAnimating()
                 }
                 
             case .failure(let error):
-                print(error)
+                if self.urlPage == 1 {
+                    //hide the activityIndicatorView and show feed back
+                    self.lblFeedback.isHidden = false
+                    self.lblFeedback.text = Constant.FEEDBACK
+                } else {
+                    //when next page data not found, hide the footer indicator
+                    self.footerCell.isHidden = true
+                    print("No data found!!!")
+                }
             }
+            //stop animate the loading indicator
+            self.activityIndicatorView.stopAnimating()
         }
     }
     
@@ -171,9 +190,11 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 //        }
 //    }
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.row == self.riseUpArr.count - 1 { //you might decide to load sooner than -1 I guess...
+        if indexPath.row == self.riseUpArr.count - 1 {
             urlPage += 1
             self.loadData(page: urlPage)
+            //show the loading indicator at the footer of tableview
+            self.footerCell.isHidden = false
             print("loading page: \(urlPage)")
         }
     }
