@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -43,39 +44,138 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TM8-6z-6P0">
-                                <rect key="frame" x="16" y="114" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
-                                <state key="normal" title="API">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ikp-ZV-ULE">
-                                <rect key="frame" x="16" y="28" width="74" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
-                                <state key="normal" title="Android">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="navigateToHome:" destination="jVc-8s-DVd" eventType="touchUpInside" id="PO7-1y-eev"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m27-8i-878">
-                                <rect key="frame" x="16" y="76" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
-                                <state key="normal" title="iOS">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="navigateToOne:" destination="jVc-8s-DVd" eventType="touchUpInside" id="U5L-1v-0lJ"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RUC Article App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tah-jA-DAq">
+                                <rect key="frame" x="16" y="45" width="223" height="34.5"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="28"/>
+                                <color key="textColor" red="0.78880766329999996" green="1" blue="0.88512775430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="0.2468794882" green="0.66680502890000004" blue="0.85902029280000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categories" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ijb-46-cfu">
+                                <rect key="frame" x="16" y="119.5" width="118.5" height="27.5"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="22"/>
+                                <color key="textColor" red="0.92020939089999998" green="0.51185458439999998" blue="0.08011282686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="0.2468794882" green="0.66680502890000004" blue="0.85902029280000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="bMk-1A-mYF">
+                                <rect key="frame" x="16" y="159" width="83" height="348"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ikp-ZV-ULE">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="33"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
+                                        <state key="normal" title="Android">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="navigateAndroid:" destination="jVc-8s-DVd" eventType="touchUpInside" id="r9z-dX-nMd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m27-8i-878">
+                                        <rect key="frame" x="0.0" y="35" width="32" height="33"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
+                                        <state key="normal" title="iOS">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="navigateIos:" destination="jVc-8s-DVd" eventType="touchUpInside" id="NPt-bf-owu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TM8-6z-6P0">
+                                        <rect key="frame" x="0.0" y="70" width="31" height="33"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
+                                        <state key="normal" title="API">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="navigateApi:" destination="jVc-8s-DVd" eventType="touchUpInside" id="9j2-IO-FWt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R14-4T-6HP">
+                                        <rect key="frame" x="0.0" y="105" width="39" height="33"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
+                                        <state key="normal" title="Web">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="navigateWeb:" destination="jVc-8s-DVd" eventType="touchUpInside" id="9TN-7q-3mR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKa-ao-yZR">
+                                        <rect key="frame" x="0.0" y="140" width="37" height="33"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
+                                        <state key="normal" title="Tool">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="navigateTool:" destination="jVc-8s-DVd" eventType="touchUpInside" id="P1E-ou-FGb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mwf-Li-5q2">
+                                        <rect key="frame" x="0.0" y="175" width="74" height="33"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
+                                        <state key="normal" title="Concept">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="navigateConcept:" destination="jVc-8s-DVd" eventType="touchUpInside" id="9ph-rc-Vxt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9D-wJ-CGN">
+                                        <rect key="frame" x="0.0" y="210" width="49" height="33"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
+                                        <state key="normal" title="News">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="navigateNews:" destination="jVc-8s-DVd" eventType="touchUpInside" id="gHB-5a-RhD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lyo-NS-z2t">
+                                        <rect key="frame" x="0.0" y="245" width="41" height="33"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
+                                        <state key="normal" title="CMS">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="navigateCms:" destination="jVc-8s-DVd" eventType="touchUpInside" id="PLI-lz-RcR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tcf-xx-kfj">
+                                        <rect key="frame" x="0.0" y="280" width="83" height="33"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
+                                        <state key="normal" title="Database">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="navigateDb:" destination="jVc-8s-DVd" eventType="touchUpInside" id="Qm5-3I-74r"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cl-w1-v7s">
+                                        <rect key="frame" x="0.0" y="315" width="49" height="33"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
+                                        <state key="normal" title="UI/UX">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="navigateUiux:" destination="jVc-8s-DVd" eventType="touchUpInside" id="s03-RN-mu0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.86274509799999999" green="0.85882352939999995" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.93424809639999995" green="0.2228447147" blue="0.13143938620000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bMk-1A-mYF" firstAttribute="leading" secondItem="vXw-hA-RV9" secondAttribute="leadingMargin" id="5qh-zj-vK0"/>
+                            <constraint firstItem="Ijb-46-cfu" firstAttribute="leading" secondItem="vXw-hA-RV9" secondAttribute="leadingMargin" id="IY4-1O-vVM"/>
+                            <constraint firstItem="Tah-jA-DAq" firstAttribute="leading" secondItem="vXw-hA-RV9" secondAttribute="leadingMargin" id="fNW-Zr-zmn"/>
+                            <constraint firstItem="Tah-jA-DAq" firstAttribute="top" secondItem="wDJ-8r-hRh" secondAttribute="bottom" constant="25" id="oVI-WZ-x3s"/>
+                            <constraint firstItem="Ijb-46-cfu" firstAttribute="top" secondItem="Tah-jA-DAq" secondAttribute="bottom" constant="40" id="pgQ-gk-olN"/>
+                            <constraint firstItem="bMk-1A-mYF" firstAttribute="top" secondItem="Ijb-46-cfu" secondAttribute="bottom" constant="12" id="r6w-DW-dua"/>
+                        </constraints>
                     </view>
                     <connections>
                         <segue destination="ZEq-q8-JZv" kind="custom" identifier="riseup" customClass="SWRevealViewControllerSeguePushController" id="KGC-cE-7Lu"/>
@@ -83,16 +183,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sOC-Bt-xAz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-546" y="-383"/>
+            <point key="canvasLocation" x="-546.39999999999998" y="-383.65817091454278"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fH8-qe-FIi">
             <objects>
                 <navigationController id="ZEq-q8-JZv" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="h0v-OI-Wyd">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="h0v-OI-Wyd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.27927508950233459" green="0.58635050058364868" blue="0.86181420087814331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.38927355408668518" green="0.868266761302948" blue="0.70658403635025024" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
@@ -123,6 +222,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="149" sectionHeaderHeight="23" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="p8k-an-G5s">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" red="0.69803921570000005" green="0.80392156859999997" blue="0.81960784310000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="135" id="Tvv-77-1Mw" customClass="RiseUpCell" customModule="rise_up" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="23" width="375" height="135"/>
@@ -132,7 +232,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cHz-qc-A8L">
-                                                    <rect key="frame" x="3" y="5" width="369" height="125"/>
+                                                    <rect key="frame" x="3" y="10" width="369" height="125"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="639-5z-zhO">
                                                             <rect key="frame" x="0.0" y="0.0" width="145" height="125"/>
@@ -141,18 +241,18 @@
                                                                 <constraint firstAttribute="width" constant="145" id="O14-xu-AVs"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qD-dz-P6D">
-                                                            <rect key="frame" x="147" y="0.0" width="222" height="24"/>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qD-dz-P6D">
+                                                            <rect key="frame" x="147" y="0.0" width="222" height="20"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="222" id="1TN-ad-9Ok"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chw-wf-hu8">
-                                                            <rect key="frame" x="147" y="101" width="37" height="24"/>
-                                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                            <rect key="frame" x="147" y="105" width="38.5" height="20"/>
+                                                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -170,12 +270,13 @@
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="cHz-qc-A8L" firstAttribute="top" secondItem="UT2-F2-PHz" secondAttribute="top" constant="5" id="2fQ-j3-Wdp"/>
-                                                <constraint firstAttribute="bottom" secondItem="cHz-qc-A8L" secondAttribute="bottom" constant="5" id="3dg-D1-XkA"/>
+                                                <constraint firstItem="cHz-qc-A8L" firstAttribute="top" secondItem="UT2-F2-PHz" secondAttribute="top" constant="10" id="2fQ-j3-Wdp"/>
+                                                <constraint firstAttribute="bottom" secondItem="cHz-qc-A8L" secondAttribute="bottom" id="3dg-D1-XkA"/>
                                                 <constraint firstAttribute="trailing" secondItem="cHz-qc-A8L" secondAttribute="trailing" constant="3" id="6vJ-a0-vHI"/>
                                                 <constraint firstItem="cHz-qc-A8L" firstAttribute="leading" secondItem="UT2-F2-PHz" secondAttribute="leading" constant="3" id="MbL-NA-oBy"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.69803921568627447" green="0.80392156862745101" blue="0.81960784313725488" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="cardView" destination="cHz-qc-A8L" id="aWH-q9-ERy"/>
                                             <outlet property="imgImage" destination="639-5z-zhO" id="pHw-lq-i7q"/>
@@ -200,17 +301,18 @@
                                                 <constraint firstItem="NEU-i3-MuB" firstAttribute="centerY" secondItem="TPc-FG-6eR" secondAttribute="centerY" id="skC-Kh-1ft"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.69803921570000005" green="0.80392156859999997" blue="0.81960784310000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7N-ne-uLi">
-                                <rect key="frame" x="187.5" y="302" width="0.0" height="0.0"/>
+                                <rect key="frame" x="187.5" y="301.5" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
                                 <color key="textColor" red="0.93424809639999995" green="0.2228447147" blue="0.13143938620000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.69803921570000005" green="0.80392156859999997" blue="0.81960784310000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="r7N-ne-uLi" firstAttribute="centerX" secondItem="4aF-Oq-tza" secondAttribute="centerX" id="DS1-Q2-inR"/>
                             <constraint firstItem="p8k-an-G5s" firstAttribute="leading" secondItem="4aF-Oq-tza" secondAttribute="leading" id="I0S-MN-J6y"/>
@@ -221,7 +323,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="5tq-jc-bkQ">
-                        <barButtonItem key="leftBarButtonItem" image="menu" id="p5a-LR-PS1"/>
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="p5a-LR-PS1">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="btnMenu" destination="p5a-LR-PS1" id="bbh-zz-rwF"/>

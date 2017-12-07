@@ -9,7 +9,6 @@
 import UIKit
 import Alamofire
 import AlamofireImage
-import SwiftyJSON
 import SwiftSoup
 
 class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -23,11 +22,12 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var activityIndicatorView : UIActivityIndicatorView!
     //table view footer contains loading indicator
     var footerCell: UITableViewCell!
+    //background color
+    var bgColor = UIColor(red: 215/255.0, green: 243/255.0, blue: 248/255.0, alpha: 0.6)
     
     @IBOutlet weak var btnMenu: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var lblFeedback: UILabel!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,17 +35,20 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.tableView.dataSource = self
         self.title = screenTitle
         self.lblFeedback.isHidden = true
+        //set the background color of tableview
+        self.tableView.backgroundView = nil
+        self.tableView.backgroundColor = self.bgColor
         
         //add footerCell to tableFooterView
         //if scrolling to bottom event not hapen, footerCell is hidden
-        //And when the event happens, footerCell is shown, but if data on next page not exist, it will hide
+        //And when the event happens, footerCell is shown, but if data on next page not exist it will hide
         footerCell = tableView.dequeueReusableCell(withIdentifier: "loading_next")
         self.tableView.tableFooterView = footerCell
         self.tableView.tableFooterView?.isHidden = true
         
         //to make side bar menu works
         if self.revealViewController() != nil {
-            self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 180
+            self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 120
             btnMenu.target = self.revealViewController()
             btnMenu.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
@@ -65,38 +68,38 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         var fullUrl = ""
         //compare the screen title to generate each url of the screen
         switch self.screenTitle{
-            case "Android":
-                fullUrl = Constant.MAIN_URL + Constant.ANDROID + String(page)
+            case Constant.ANDROID_SCREEN_TITLE:
+                fullUrl = Constant.MAIN_URL + Constant.ANDROID_URL + String(page)
                 break
-            case "API":
-                fullUrl = Constant.MAIN_URL + Constant.API + String(page)
+            case Constant.API_SCREEN_TITLE:
+                fullUrl = Constant.MAIN_URL + Constant.API_URL + String(page)
                 break
-            case "CMS":
-                fullUrl = Constant.MAIN_URL + Constant.CMS + String(page)
+            case Constant.CMS_SCREEN_TITLE:
+                fullUrl = Constant.MAIN_URL + Constant.CMS_URL + String(page)
                 break
-            case "Concept":
-                fullUrl = Constant.MAIN_URL + Constant.CONCEPT + String(page)
+            case Constant.CONCEPT_SCREEN_TITLE:
+                fullUrl = Constant.MAIN_URL + Constant.CONCEPT_URL + String(page)
                 break
-            case "Database":
-                fullUrl = Constant.MAIN_URL + Constant.DB + String(page)
+            case Constant.DB_SCREEN_TITLE:
+                fullUrl = Constant.MAIN_URL + Constant.DB_URL + String(page)
                 break
-            case "iOS":
-                fullUrl = Constant.MAIN_URL + Constant.IOS + String(page)
+            case Constant.IOS_SCREEN_TITLE:
+                fullUrl = Constant.MAIN_URL + Constant.IOS_URL + String(page)
                 break
-            case "News":
-                fullUrl = Constant.MAIN_URL + Constant.NEWS + String(page)
+            case Constant.NEWS_SCREEN_TITLE:
+                fullUrl = Constant.MAIN_URL + Constant.NEWS_URL + String(page)
                 break
-            case "Tool":
-                fullUrl = Constant.MAIN_URL + Constant.TOOL + String(page)
+            case Constant.TOOL_SCREEN_TITLE:
+                fullUrl = Constant.MAIN_URL + Constant.TOOL_URL + String(page)
                 break
-            case "UI/UX":
-                fullUrl = Constant.MAIN_URL + Constant.UIUX + String(page)
+            case Constant.UIUX_SCREEN_TITLE:
+                fullUrl = Constant.MAIN_URL + Constant.UIUX_URL + String(page)
                 break
-            case "Web":
-                fullUrl = Constant.MAIN_URL + Constant.WEB + String(page)
+            case Constant.WEB_SCREEN_TITLE:
+                fullUrl = Constant.MAIN_URL + Constant.WEB_URL + String(page)
                 break
             default:
-                fullUrl = Constant.MAIN_URL + Constant.ANDROID + String(page)
+                fullUrl = Constant.MAIN_URL + Constant.ANDROID_URL + String(page)
         }
         //request to the server with Alamofire and extract data withSwiftSOUP
         Alamofire.request(fullUrl, method: .get).validate().responseString { response in
@@ -170,25 +173,14 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
         //styling the row layout
         cell.cardView.layer.masksToBounds = true
-        cell.cardView.backgroundColor = UIColor(red: 240/255.0, green: 240/255.0, blue: 240/255.0, alpha: 1.0)
         cell.cardView.layer.cornerRadius = 20.0
-        cell.cardView.layer.shadowColor = UIColor.black.withAlphaComponent(0.5).cgColor
-        cell.cardView.layer.shadowOffset = CGSize(width: 0, height: 2)
+        cell.cardView.layer.borderWidth = 1.2
+        cell.cardView.layer.borderColor = UIColor.black.cgColor
 
         return cell
     }
-    
-//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        let actualPos = scrollView.contentOffset.y
-//        let contentHeight = scrollView.contentSize.height - self.tableView.frame.size.height
-//        if actualPos >= contentHeight {
-//            if urlPage < urlPage + 1 {
-//                urlPage = urlPage + 1
-//                print("loading page: \(urlPage)")
-//                self.loadData(page: urlPage)
-//            }
-//        }
-//    }
+
+    //scroll to bottom of tabe view, this function invoke
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.row == self.riseUpArr.count - 1 {
             urlPage += 1
