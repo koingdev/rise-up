@@ -10,7 +10,10 @@ Frameworks/Libraries used: <br>
     - SWRevealViewController <br>
     - Alamofire <br>
     - AlamofireImage <br>
-    - SwiftSoup
+    - SwiftSoup <br>
+
+Future Plans: <br>
+    - Allow users to save article in phone and view it in offline mode
 
 Welcome Screen
 --------------
