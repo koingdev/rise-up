@@ -1,7 +1,7 @@
 # rise-up
 RUC Article Mobile Web App
 
-(https://raw.github.com/koingdev/rise-up/master/screenshots/welcome.png?raw=true "Welcome Screen")
+<img src="https://raw.github.com/koingdev/rise-up/master/screenshots/welcome.png?raw=true" alt="Welcome Screen">
 
 (https://raw.github.com/koingdev/rise-up/master/screenshots/menu.png?raw=true "Menu")
 
