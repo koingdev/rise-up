@@ -10,9 +10,11 @@ Frameworks/Libraries used: <br>
     - SWRevealViewController <br>
     - Alamofire <br>
     - AlamofireImage <br>
+    - SwiftyJSON <br>
     - SwiftSoup <br>
 
 Future Plans: <br>
+    - Replace SwiftSoup with backend PHP for doing the logic of extracting data from website <br>
     - Allow users to save article in phone and view it in offline mode
 
 Welcome Screen
