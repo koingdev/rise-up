@@ -38,4 +38,4 @@ Thanks
 
 **Saingkoing SEA** ©2017+, KoingDev. <br>
 Authored and maintained by KoingDev.
-<a href="https://facebook.com/sskdev">Link to my facebook</a>
+<a href="https://facebook.com/sskdev" _target="blank">Link to my facebook</a>
