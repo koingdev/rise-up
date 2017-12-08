@@ -1,15 +1,15 @@
 # RUC Engineering Article App
 
-Functionalities:
-    - Each article will be opened in WebView
-    - UITableView with endless scroll
-    - Swipe to refresh content
-    - Well-designed menu with CustomGradientView
+Functionalities: <br>
+    - Each article will be opened in WebView <br>
+    - UITableView with endless scroll <br>
+    - Swipe to refresh content <br>
+    - Well-designed menu with CustomGradientView <br>
 
-Frameworks/Libraries used:
-    - SWRevealViewController
-    - Alamofire
-    - AlamofireImage
+Frameworks/Libraries used: <br>
+    - SWRevealViewController <br>
+    - Alamofire <br>
+    - AlamofireImage <br>
     - SwiftSoup
 
 Welcome Screen
