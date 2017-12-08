@@ -36,5 +36,5 @@ struct Constant {
     static let DB_SCREEN_TITLE = "Database"
     static let CONCEPT_SCREEN_TITLE = "Concept"
     
-    static let FEEDBACK = "Sorry we cannot connect to the server!!\nPlease check your Internet connection ^^\nand try again.Thanks... :D"
+    static let FEEDBACK = "Sorry we cannot connect to the server!\nPlease check your Internet connection!\nSwipe to refresh the content ^^\nThank you :D"
 }

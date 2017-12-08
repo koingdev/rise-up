@@ -21,12 +21,13 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var activityIndicatorView : UIActivityIndicatorView!
     //table view footer contains loading indicator
     var footerCell: UITableViewCell!
-    //background color
-    var bgColor = UIColor(red: 228/255.0, green: 228/255.0, blue: 228/255.0, alpha: 1.0)
+    var hasDataNextPage = true
     
     @IBOutlet weak var btnMenu: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var lblFeedback: UILabel!
+    
+    var refreshControl: UIRefreshControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,9 +35,14 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.tableView.dataSource = self
         self.title = screenTitle
         self.lblFeedback.isHidden = true
-        //set the background color of tableview
-        self.tableView.backgroundView = nil
-        self.tableView.backgroundColor = self.bgColor
+        
+        refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: UIControlEvents.valueChanged)
+        if #available(iOS 10.0, *) {
+            tableView.refreshControl = refreshControl
+        } else {
+            tableView.backgroundView = refreshControl
+        }
         
         //add footerCell to tableFooterView and hide it by default
         //And when user scroll to bottom, footerCell shows, but if data on next page not exist
@@ -54,15 +60,31 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
         }
         
-        //start loading indicator
+        //set up loading indicator
         activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
         self.tableView.backgroundView = activityIndicatorView
-        activityIndicatorView?.startAnimating()
+        //start loading indicator
+        self.activityIndicatorView?.startAnimating()
 
         //loading data
         self.loadData(page: urlPage)
     }
-
+    
+    //pull to refresh data
+    func refresh(_ refreshControl: UIRefreshControl) {
+        //remove all current data, reload tableview
+        self.riseUpArr.removeAll()
+        self.tableView.reloadData()
+        //set these 3 variable to default value
+        self.urlPage = 1
+        self.hasDataNextPage = true
+        self.lblFeedback.isHidden = true
+        //start fetching data and reload new tableview
+        self.loadData(page: urlPage)
+        //end refreshing
+        self.refreshControl?.endRefreshing()
+    }
+    
     func loadData(page: Int){
         var fullUrl = ""
         //compare the screen title to generate each url of the screen
@@ -119,6 +141,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                     }
                     //reload the table view if data exists
                     self.tableView.reloadData()
+
                 }catch Exception.Error(let type, let message){
                     self.activityIndicatorView.stopAnimating()
                 }catch{
@@ -127,14 +150,16 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 
             case .failure(let error):
                 if self.urlPage == 1 {
-                    //hide the activityIndicatorView and show feed back
+                    //show feed back
                     self.lblFeedback.isHidden = false
                     self.lblFeedback.text = Constant.FEEDBACK
                 } else {
                     //when next page data not found, hide the footer indicator
-                    self.footerCell.isHidden = true
+                    self.tableView.tableFooterView?.isHidden = true
+                    self.hasDataNextPage = false
                     print("No data found!!!")
                 }
+
             }
             //stop animate the loading indicator
             self.activityIndicatorView.stopAnimating()
@@ -160,18 +185,19 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     //load data into each row
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //get a resusable cell and case it to CategoryCell, then pass to cell variable
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! RiseUpCell
-        let riseUp = self.riseUpArr[indexPath.row]
-        //update the cell data
-        cell.updateCell(content: riseUp)
-        
-        //styling the row layout
-        cell.cardView.layer.masksToBounds = true
-        cell.cardView.layer.cornerRadius = 20.0
-        cell.cardView.layer.borderWidth = 1.3
-        cell.cardView.layer.borderColor = UIColor(red: 99/255.0, green: 221/255.0, blue: 180/255.0, alpha: 1.0).cgColor
-
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? RiseUpCell {
+            let riseUp = self.riseUpArr[indexPath.row]
+            //update the cell data
+            cell.updateCell(content: riseUp)
+            //styling the row layout
+            cell.cardView.layer.masksToBounds = true
+            cell.cardView.layer.cornerRadius = 20.0
+            cell.cardView.layer.borderWidth = 1.3
+            cell.cardView.layer.borderColor = UIColor(red: 99/255.0, green: 221/255.0, blue: 180/255.0, alpha: 1.0).cgColor
+            return cell
+        } else {
+            return RiseUpCell()
+        }
     }
     //reset selected cell color
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -179,12 +205,18 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     //scroll to bottom of tabe view, this function invoke
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.row == self.riseUpArr.count - 1 {
-            urlPage += 1
-            self.loadData(page: urlPage)
-            //show the loading indicator at the footer of tableview
-            self.footerCell.isHidden = false
-            print("loading page: \(urlPage)")
+        if self.riseUpArr.count > 4 {
+            //when scroll to cell index n-1 and if hasDataNextPage is true => do work
+            if indexPath.row == self.riseUpArr.count - 1 {
+                if hasDataNextPage {
+                    urlPage += 1
+                    self.loadData(page: urlPage)
+                    //show the loading indicator at the footer of tableview
+                    self.tableView.tableFooterView?.isHidden = false
+                    print("loading page: \(urlPage)")
+                    print("total array: \(self.riseUpArr.count)")
+                }
+            }
         }
     }
 

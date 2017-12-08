@@ -15,26 +15,40 @@ class ContentVC: UIViewController {
     var url = ""
     //indicator when loading web view
     var activityIndicatorView : UIActivityIndicatorView!
-    var isLoading = true
 
     @IBOutlet weak var lblFeedback: UILabel!
     @IBOutlet weak var webView: UIWebView!
+    var refreshControl: UIRefreshControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.lblFeedback.isHidden = true
         
-        //start loading indicator
-        if isLoading {
-            activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
-            //add it to the middle of web view
-            activityIndicatorView.center = CGPoint(x: webView.frame.size.width / 2, y: webView.frame.size.height / 2)
-            self.webView.addSubview(activityIndicatorView)
-            activityIndicatorView?.startAnimating()
-        }
+        refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: UIControlEvents.valueChanged)
+        self.webView.scrollView.addSubview(refreshControl)
+        
+        //set up loading indicator
+        activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
+        //add it to the middle of web view
+        activityIndicatorView.center = CGPoint(x: webView.frame.size.width / 2, y: webView.frame.size.height / 2)
+        self.webView.addSubview(activityIndicatorView)
+        //start animate indicator
+        activityIndicatorView?.startAnimating()
         
         //load the web view
         self.loadHtml()
+    }
+    
+    //pull to refresh web view
+    func refresh(_ refreshControl: UIRefreshControl) {
+        activityIndicatorView?.startAnimating()
+        //reset current web view content
+        self.webView.loadHTMLString("", baseURL: nil)
+        //reload webview
+        self.loadHtml()
+        //end refreshing
+        self.refreshControl?.endRefreshing()
     }
     
     func loadHtml(){
@@ -74,6 +88,5 @@ class ContentVC: UIViewController {
             //stop animate the loading indicator
             self.activityIndicatorView.stopAnimating()
         }
-
     }
 }
