@@ -127,14 +127,14 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             switch response.result {
             case .success(let value):
                 do{
-                    let doc: Document = try! SwiftSoup.parse(value)
-                    let element = try! doc.select("div#content_box")
-                    let items = try! element.select("div.post").array()
+                    let doc: Document = try SwiftSoup.parse(value)
+                    let element = try doc.select("div#content_box")
+                    let items = try element.select("div.post").array()
                     for item in items{
-                        let title = try! item.select("h2.title").text()
-                        let url = try! item.select("a").attr("href")
-                        let image = try! item.select("img").attr("src")
-                        let date = try! item.select("span.thetime").text()
+                        let title = try item.select("h2.title").text()
+                        let url = try item.select("a").attr("href")
+                        let image = try item.select("img").attr("src")
+                        let date = try item.select("span.thetime").text()
                         let data = RiseUp(title: title, url: url, image: image, date: date)
                         //append data to an array
                         self.riseUpArr.append(data)
@@ -219,5 +219,4 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             }
         }
     }
-
 }

@@ -1,5 +1,17 @@
 # RUC Engineering Article App
 
+Functionalities:
+    - Each article will be opened in WebView
+    - UITableView with endless scroll
+    - Swipe to refresh content
+    - Well-designed menu with CustomGradientView
+
+Frameworks/Libraries used:
+    - SWRevealViewController
+    - Alamofire
+    - AlamofireImage
+    - SwiftSoup
+
 Welcome Screen
 --------------
 <img src="https://raw.github.com/koingdev/rise-up/master/screenshots/welcome.png?raw=true" alt="Welcome Screen">
