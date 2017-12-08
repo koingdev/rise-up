@@ -15,7 +15,7 @@ Frameworks/Libraries used: <br>
 
 Future Plans: <br>
     - Replace SwiftSoup with backend PHP for doing the logic of extracting data from website <br>
-    - Allow users to save article in phone and view it in offline mode
+    - Allow users to save article in phone and can view it in offline mode
 
 Welcome Screen
 --------------
