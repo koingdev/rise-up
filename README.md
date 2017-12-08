@@ -1,4 +1,4 @@
-# RUC Article Mobile Web App
+# RUC Engineering Article App
 
 Welcome Screen
 --------------
