@@ -28,6 +28,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var lblFeedback: UILabel!
     
     var refreshControl: UIRefreshControl!
+    var isSwiped = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,11 +39,13 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: UIControlEvents.valueChanged)
-        if #available(iOS 10.0, *) {
-            tableView.refreshControl = refreshControl
-        } else {
-            tableView.backgroundView = refreshControl
-        }
+        //testing on iOS 9.0
+        self.tableView.addSubview(refreshControl)
+//        if #available(iOS 10.0, *) {
+//            tableView.refreshControl = refreshControl
+//        } else {
+//            tableView.backgroundView = refreshControl
+//        }
         
         //add footerCell to tableFooterView and hide it by default
         //And when user scroll to bottom, footerCell shows, but if data on next page not exist
@@ -72,13 +75,15 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     //pull to refresh data
     func refresh(_ refreshControl: UIRefreshControl) {
+        activityIndicatorView?.startAnimating()
         //remove all current data, reload tableview
         self.riseUpArr.removeAll()
         self.tableView.reloadData()
-        //set these 3 variable to default value
+        //set these 4 variable to default value
         self.urlPage = 1
         self.hasDataNextPage = true
         self.lblFeedback.isHidden = true
+        self.tableView.tableFooterView?.isHidden = true
         //start fetching data and reload new tableview
         self.loadData(page: urlPage)
         //end refreshing

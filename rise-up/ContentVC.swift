@@ -30,8 +30,8 @@ class ContentVC: UIViewController {
         
         //set up loading indicator
         activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
-        //add it to the middle of web view
-        activityIndicatorView.center = CGPoint(x: webView.frame.size.width / 2, y: webView.frame.size.height / 2)
+        //add it to the middle of the screen
+        activityIndicatorView.center = CGPoint(x: self.view.frame.size.width / 2, y: self.webView.frame.size.height / 2)
         self.webView.addSubview(activityIndicatorView)
         //start animate indicator
         activityIndicatorView?.startAnimating()
