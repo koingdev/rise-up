@@ -263,7 +263,7 @@
                                                                 <constraint firstAttribute="width" constant="145" id="O14-xu-AVs"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qD-dz-P6D">
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qD-dz-P6D">
                                                             <rect key="frame" x="147" y="0.0" width="222" height="20"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="222" id="1TN-ad-9Ok"/>
@@ -357,7 +357,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tth-Ff-Yrp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="194" y="331"/>
+            <point key="canvasLocation" x="192.80000000000001" y="330.58470764617692"/>
         </scene>
         <!--ContentVC-->
         <scene sceneID="PY6-ov-BVb">

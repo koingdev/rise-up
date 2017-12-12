@@ -196,7 +196,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             cell.updateCell(content: riseUp)
             //styling the row layout
             cell.cardView.layer.masksToBounds = true
-            cell.cardView.layer.cornerRadius = 20.0
+            cell.cardView.layer.cornerRadius = 10.0
             cell.cardView.layer.borderWidth = 1.3
             cell.cardView.layer.borderColor = UIColor(red: 99/255.0, green: 221/255.0, blue: 180/255.0, alpha: 1.0).cgColor
             return cell
